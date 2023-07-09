@@ -137,12 +137,14 @@ def add_predictions(input_data):
     st.write("The cell cluster is:")
     
     if predictions[0] == 0:
-        st.write("Benign")
+        st.write("<span class='prediction benign'>Benign</span>", unsafe_allow_html=True)
     else:
-        st.write("Malicious")
+        st.write("<span class='prediction malicious'>Malicious</span>", unsafe_allow_html=True)
         
     st.write("Probability of being benign: ", model.predict_proba(input_arr_scaled)[0][0])    
-    st.write("Probability of being malicious: ", model.predict_proba(input_arr_scaled)[0][1])    
+    st.write("Probability of being malicious: ", model.predict_proba(input_arr_scaled)[0][1])  
+    
+    st.write("This app is just for reference of expert to make work faster, it's recomended to visit the practitioner for own good")
     
     
 def main():
@@ -155,7 +157,7 @@ def main():
         st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
     with st.container():
         st.title("Cancer predictor")
-        st.write("dasfdalndfaijndhbfijfjs")
+        st.write("This app can provide you with a quick prediction with given parameters.")
     
     col1, col2 = st.columns([4, 1])
     

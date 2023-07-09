@@ -1,0 +1,20 @@
+.css-j5r0tf {
+    padding: 15px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+
+.prediction{
+    padding: 8px;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+.benign{
+    background-color: greenyellow;
+    
+}
+
+.malicious {
+    background-color: red;
+}
